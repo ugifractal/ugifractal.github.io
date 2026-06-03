@@ -49,4 +49,19 @@ export const projects: Project[] = [
       'Tailwind CSS admin panel',
     ],
   },
+  {
+    title: 'Newsletter App',
+    description: 'A startup project for creating and sending newsletters to members.',
+    longDescription:
+      'A Ruby on Rails startup that allows users to create, manage, and send newsletters to their members. Built with Hotwire Turbo for seamless navigation, Stimulus.js for interactivity, and Tailwind CSS for the UI.',
+    tags: ['Ruby on Rails', 'Tailwind CSS', 'Stimulus.js', 'Hotwire Turbo', 'PostgreSQL'],
+    dateRange: 'Sep 2021 - 2025',
+    highlights: [
+      'Newsletter creation & sending',
+      'Member & subscriber management',
+      'Hotwire Turbo-driven navigation',
+      'Stimulus.js interactive components',
+      'Tailwind CSS responsive design',
+    ],
+  },
 ];
