@@ -159,4 +159,17 @@ export const projects: Project[] = [
       'Multiple API provider integrations',
     ],
   },
+  {
+    title: 'Setup Server for taelskridt.dk',
+    description: 'Set up and configured servers with load balancing for taelskridt.dk.',
+    longDescription:
+      'Set up multiple production servers for taelskridt.dk, configured Nginx as a reverse proxy, and implemented load balancing to ensure high availability and performance for the Ruby on Rails application.',
+    tags: ['Ruby on Rails', 'Nginx', 'Linux'],
+    dateRange: 'Jan 2021 - Mar 2021',
+    highlights: [
+      'Multiple server setup',
+      'Load balancer configuration',
+      'Nginx reverse proxy setup',
+    ],
+  },
 ];
