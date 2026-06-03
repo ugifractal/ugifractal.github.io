@@ -134,4 +134,16 @@ export const projects: Project[] = [
       'Database-driven architecture',
     ],
   },
+  {
+    title: 'Contribute to Development of Italian Property Management',
+    description: 'Contributing to an Italian property management platform with bug fixes and improvements.',
+    longDescription:
+      'Contributed to the development of an Italian property management application, providing bug fixes and maintenance improvements to ensure platform stability.',
+    tags: ['Ruby on Rails'],
+    dateRange: 'Dec 2024 - 2025',
+    highlights: [
+      'Bug fixes & maintenance',
+      'Platform stability improvements',
+    ],
+  },
 ];
