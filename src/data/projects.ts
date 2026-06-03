@@ -146,4 +146,17 @@ export const projects: Project[] = [
       'Platform stability improvements',
     ],
   },
+  {
+    title: 'Implement Important Features for Weather Information App for Embedded Device',
+    description: 'Implemented API integrations and data collection for a weather information app targeting embedded devices.',
+    longDescription:
+      'Implemented key features for a weather information application designed for embedded devices. Integrated multiple API providers using OAuth2 authentication, collected and processed weather data for display on embedded device screens.',
+    tags: ['Ruby on Rails', 'Google Calendar API', 'OpenMeteo API', 'OAuth2'],
+    dateRange: 'Aug 2023 - 2024',
+    highlights: [
+      'API integration with OAuth2 authentication',
+      'Data collection for embedded device display',
+      'Multiple API provider integrations',
+    ],
+  },
 ];
