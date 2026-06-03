@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact">
+  <section>
+    <div class="container">
+      <h1 class="page-title">Get in Touch</h1>
+      <p class="contact-intro">
+        I'm always open to discussing new projects, creative ideas, or opportunities 
+        to be part of your vision. Feel free to reach out.
+      </p>
+
+      <div class="contact-grid">
+        <a href="mailto:ugidmtest@gmail.com" class="contact-card">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">ugidmtest@gmail.com</span>
+        </a>
+        <a href="https://github.com/ugifractal" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/ugifractal</span>
+        </a>
+        <a href="https://www.linkedin.com/in/sugiarto-udah-15023111" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/sugiarto-udah-15023111</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style is:global>
+  .contact-intro {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: 3rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.3s;
+    color: var(--text-primary);
+  }
+
+  .contact-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    color: var(--text-primary);
+  }
+
+  .contact-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  .contact-value {
+    font-size: 1rem;
+    color: var(--accent);
+    word-break: break-all;
+  }
+</style>

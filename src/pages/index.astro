@@ -1,17 +1,138 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Home">
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Sugiarto</h1>
+      <p class="hero-title">Senior Web Developer</p>
+      <p class="hero-desc">
+        I build robust web applications with <strong>Ruby on Rails</strong> and integrate 
+        custom solutions for e-commerce platforms. Passionate about clean architecture, 
+        scalable APIs, and delivering exceptional digital experiences.
+      </p>
+      <div class="hero-actions">
+        <a href="/projects" class="btn btn-primary">View Projects</a>
+        <a href="/contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="quick-links">
+    <div class="container">
+      <div class="grid">
+        <a href="/about" class="quick-card">
+          <h3>About Me</h3>
+          <p>Background, skills &amp; experience</p>
+        </a>
+        <a href="/projects" class="quick-card">
+          <h3>Projects</h3>
+          <p>Recent work &amp; case studies</p>
+        </a>
+        <a href="/contact" class="quick-card">
+          <h3>Contact</h3>
+          <p>Let's work together</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style is:global>
+  .hero {
+    padding: 8rem 0 4rem;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-inner {
+    max-width: 720px;
+  }
+
+  .hero-greeting {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-name {
+    font-size: 4.5rem;
+    margin-bottom: 0.25rem;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+
+  .hero-desc {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .quick-links {
+    padding: 2rem 0 5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .quick-card {
+    display: block;
+    padding: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.3s;
+    color: var(--text-primary);
+  }
+
+  .quick-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    color: var(--text-primary);
+  }
+
+  .quick-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .quick-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .hero { padding: 5rem 0 3rem; min-height: auto; }
+    .hero-name { font-size: 3rem; }
+    .hero-title { font-size: 1.2rem; }
+    .grid { grid-template-columns: 1fr; }
+    .hero-actions { flex-direction: column; }
+    .hero-actions .btn { text-align: center; }
+  }
+</style>

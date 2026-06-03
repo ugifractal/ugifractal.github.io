@@ -1,0 +1,26 @@
+service: portfolio
+image: ugifractal/portfolio
+
+servers:
+  web:
+    hosts:
+      - drx.catfish-algol.ts.net
+
+proxy:
+  host: sugiarto.duruxignition.com
+  app_port: 80
+  ssl: false
+  healthcheck:
+    path: /
+    interval: 3
+    timeout: 3
+
+registry:
+  server: ghcr.io
+  username: ugifractal
+  password:
+    - GHCR_TOKEN
+
+builder:
+  arch: amd64
+  dockerfile: Dockerfile

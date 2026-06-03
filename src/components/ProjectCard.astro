@@ -1,0 +1,114 @@
+---
+import type { Project } from '../data/projects';
+
+export interface Props {
+  project: Project;
+  index: number;
+}
+
+const { project, index } = Astro.props;
+---
+
+<article class="project-card">
+  <div class="project-number">0{index + 1}</div>
+  <div class="project-content">
+    <h3 class="project-title">{project.title}</h3>
+    <span class="project-date">{project.dateRange}</span>
+    <p class="project-desc">{project.longDescription}</p>
+    <div class="project-tags">
+      {project.tags.map((tag) => <span class="tag">{tag}</span>)}
+    </div>
+    <ul class="project-highlights">
+      {project.highlights.map((h) => <li>{h}</li>)}
+    </ul>
+  </div>
+</article>
+
+<style>
+  .project-card {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .project-card:last-child {
+    border-bottom: none;
+  }
+
+  .project-number {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    min-width: 3rem;
+  }
+
+  .project-content {
+    flex: 1;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .project-date {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .project-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    color: var(--accent);
+    background: rgba(212, 165, 116, 0.1);
+    border: 1px solid rgba(212, 165, 116, 0.2);
+    border-radius: 4px;
+  }
+
+  .project-highlights {
+    list-style: none;
+    padding: 0;
+  }
+
+  .project-highlights li {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .project-highlights li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  @media (max-width: 768px) {
+    .project-card {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>

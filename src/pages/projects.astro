@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data/projects';
+---
+
+<BaseLayout title="Projects">
+  <section>
+    <div class="container">
+      <h1 class="page-title">Projects</h1>
+      <p class="projects-intro">
+        A selection of projects I've built. More coming soon.
+      </p>
+      <div class="projects-list">
+        {projects.map((project, index) => (
+          <ProjectCard project={project} index={index} />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style is:global>
+  .projects-intro {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+</style>
