@@ -64,4 +64,18 @@ export const projects: Project[] = [
       'Tailwind CSS responsive design',
     ],
   },
+  {
+    title: 'Custom Shopify App for a Book and Printing Store',
+    description: 'A custom Shopify app for syncing products, collections, orders, and customers with management tools.',
+    longDescription:
+      'A custom Shopify app built for a book and printing store, handling bidirectional sync of products, collections, orders, and customers. Includes management tools for banners, product groups, and categorization.',
+    tags: ['Ruby on Rails', 'Shopify', 'Shopify REST & GraphQL API'],
+    dateRange: '2021 - 2022',
+    highlights: [
+      'Product & collection sync',
+      'Order & customer sync',
+      'Banner management tools',
+      'Product groups & categorization',
+    ],
+  },
 ];
