@@ -96,4 +96,17 @@ export const projects: Project[] = [
       'Discount management',
     ],
   },
+  {
+    title: 'Custom Shopify App for Email Dispatch (Currency Conversion)',
+    description: 'A custom Shopify app that sends email notifications about currency conversion to customers.',
+    longDescription:
+      'A custom Shopify app that monitors currency exchange rates and automatically dispatches email notifications to customers when rates change, helping them make informed purchasing decisions.',
+    tags: ['Ruby on Rails', 'Shopify'],
+    dateRange: 'Mar 2021 - Jan 2022',
+    highlights: [
+      'Currency conversion monitoring',
+      'Automated email dispatch',
+      'Customer notification system',
+    ],
+  },
 ];
