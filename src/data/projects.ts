@@ -79,4 +79,21 @@ export const projects: Project[] = [
       'Product groups & categorization',
     ],
   },
+  {
+    title: 'Custom Shopify App for a Wool Clothing Store',
+    description: 'A custom Shopify app for a wool clothing store with custom swatches, colors, and product sync.',
+    longDescription:
+      'A custom Shopify app built for a wool clothing store, featuring custom swatches and color selectors, draft order management, app proxy for custom frontend routes, product sync, webhook handling, metafield management, background job processing, and discount management.',
+    tags: ['Ruby on Rails', 'Shopify', 'Shopify Admin API (REST)', 'Sidekiq'],
+    dateRange: 'May 2021 - Aug 2021',
+    highlights: [
+      'Custom swatches & color selectors',
+      'Draft order management',
+      'Shopify App Proxy integration',
+      'Product sync via webhooks',
+      'Metafield management',
+      'Background job processing',
+      'Discount management',
+    ],
+  },
 ];
