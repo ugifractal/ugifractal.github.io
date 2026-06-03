@@ -15,6 +15,9 @@ proxy:
     interval: 3
     timeout: 3
 
+ssh:
+  user: sugiarto
+
 registry:
   server: ghcr.io
   username: ugifractal

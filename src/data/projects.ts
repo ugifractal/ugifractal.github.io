@@ -15,7 +15,7 @@ export const projects: Project[] = [
     longDescription:
       'A comprehensive SaaS platform focused on aviation news aggregation and delivery. Built with Ruby on Rails, the platform features subscription-based access via Stripe, full-text search powered by Elasticsearch, and reliable background job processing with Sidekiq.',
     tags: ['Ruby on Rails', 'Stripe', 'Elasticsearch', 'Sidekiq', 'PostgreSQL'],
-    dateRange: '2024 - Present',
+    dateRange: '2012 - Present',
     highlights: [
       'Subscription billing with Stripe integration',
       'Advanced search via Elasticsearch',
