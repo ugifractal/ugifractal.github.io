@@ -24,10 +24,10 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: 'Custom Shopify App Middleware for API Integration',
-    description: 'A custom Shopify middleware app for a beauty tools store, integrating Shopify with external services.',
+    title: 'Custom Shopify App for Beauty Stores',
+    description: 'A custom Shopify middleware app for beauty stores, integrating Shopify with external services.',
     longDescription:
-      'A custom-built Shopify middleware app installed on a beauty tools store. It acts as a bridge between Shopify and multiple external systems, handling real-time sync of orders, fulfillments, B2B data, transactions, and metafields via webhooks. The app includes custom Sidekiq retry logic, SFTP sync with Azure, SureTax and Microsoft D365 integrations, and generates custom XML and PDF documents.',
+      'A custom-built Shopify middleware app used across multiple beauty stores. It acts as a bridge between Shopify and multiple external systems, handling real-time sync of orders, fulfillments, B2B data, transactions, and metafields via webhooks. The app includes custom Sidekiq retry logic, SFTP sync with Azure, SureTax and Microsoft D365 integrations, and generates custom XML and PDF documents.',
     tags: [
       'Ruby on Rails',
       'Shopify',
