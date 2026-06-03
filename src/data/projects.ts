@@ -31,6 +31,7 @@ export const projects: Project[] = [
     tags: [
       'Ruby on Rails',
       'Shopify',
+      'Shopify Admin API (GraphQL)',
       'Tailwind CSS',
       'Sidekiq',
       'SFTP',
