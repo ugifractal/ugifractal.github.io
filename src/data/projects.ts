@@ -109,4 +109,16 @@ export const projects: Project[] = [
       'Automated system integration',
     ],
   },
+  {
+    title: 'Custom Shopify App for Simpro API Integration',
+    description: 'A custom Shopify app that integrates product and order updates with Simpro.',
+    longDescription:
+      'A custom Shopify app that syncs product data and order updates between Shopify and Simpro, enabling seamless integration between the e-commerce platform and Simpro business management system.',
+    tags: ['Ruby on Rails', 'Shopify', 'Shopify Admin API (REST)', 'Simpro API'],
+    dateRange: 'Dec 2020 - 2021',
+    highlights: [
+      'Product sync to Simpro',
+      'Order update integration',
+    ],
+  },
 ];
