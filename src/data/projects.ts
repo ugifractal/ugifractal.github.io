@@ -69,7 +69,7 @@ export const projects: Project[] = [
     description: 'A custom Shopify app for syncing products, collections, orders, and customers with management tools.',
     longDescription:
       'A custom Shopify app built for a book and printing store, handling bidirectional sync of products, collections, orders, and customers. Includes management tools for banners, product groups, and categorization.',
-    tags: ['Ruby on Rails', 'Shopify', 'Shopify REST & GraphQL API'],
+    tags: ['Ruby on Rails', 'Shopify', 'Shopify Admin API (REST)', 'Shopify GraphQL API'],
     dateRange: '2021 - 2022',
     highlights: [
       'Product & collection sync',
