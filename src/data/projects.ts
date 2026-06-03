@@ -121,4 +121,17 @@ export const projects: Project[] = [
       'Order update integration',
     ],
   },
+  {
+    title: 'Real Estate Database App',
+    description: 'An app aimed at managing a real estate database.',
+    longDescription:
+      'A real estate database management app built with Ruby on Rails, designed to manage property listings, client data, and related real estate information efficiently.',
+    tags: ['Ruby on Rails', 'PostgreSQL'],
+    dateRange: 'Nov 2021 - 2025',
+    highlights: [
+      'Property listing management',
+      'Client data management',
+      'Database-driven architecture',
+    ],
+  },
 ];
