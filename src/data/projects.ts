@@ -185,4 +185,17 @@ export const projects: Project[] = [
       'VPS server setup',
     ],
   },
+  {
+    title: 'Upgrade Old Ruby on Rails App for noomii.com',
+    description: 'Upgraded Ruby version, Rails version, and Stripe API for noomii.com.',
+    longDescription:
+      'Performed a comprehensive upgrade of the Ruby on Rails application for noomii.com, including upgrading the Ruby runtime, Rails framework version, and Stripe API integration to modern standards.',
+    tags: ['Ruby on Rails', 'Stripe API', 'Google Maps API'],
+    dateRange: 'Aug 2023 - 2024',
+    highlights: [
+      'Ruby version upgrade',
+      'Rails version upgrade',
+      'Stripe API upgrade',
+    ],
+  },
 ];
