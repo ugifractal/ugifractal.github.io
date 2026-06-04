@@ -7,12 +7,26 @@ export interface Props {
 }
 
 const { project, index } = Astro.props;
+
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .trim();
+}
+
+const anchorId = slugify(project.title);
 ---
 
-<article class="project-card">
+<article class="project-card" id={anchorId}>
   <div class="project-number">0{index + 1}</div>
   <div class="project-content">
-    <h3 class="project-title">{project.title}</h3>
+    <h3 class="project-title">
+      <a href={`#${anchorId}`} class="anchor-link" aria-label="Link to this project">#</a>
+      {project.title}
+    </h3>
     <span class="project-date">{project.dateRange}</span>
     <p class="project-desc">{project.longDescription}</p>
     <div class="project-tags">
@@ -30,6 +44,17 @@ const { project, index } = Astro.props;
     gap: 2rem;
     padding: 2rem 0;
     border-bottom: 1px solid var(--border);
+    scroll-margin-top: 80px;
+  }
+
+  .project-card:target {
+    background: rgba(212, 165, 116, 0.05);
+    border-radius: 8px;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-color: var(--accent);
   }
 
   .project-card:last-child {
@@ -50,6 +75,23 @@ const { project, index } = Astro.props;
   .project-title {
     font-size: 1.5rem;
     margin-bottom: 0.25rem;
+  }
+
+  .anchor-link {
+    color: var(--text-muted);
+    opacity: 0;
+    margin-right: 0.35rem;
+    font-size: 0.9em;
+    transition: opacity 0.2s, color 0.2s;
+    text-decoration: none;
+  }
+
+  .project-title:hover .anchor-link {
+    opacity: 1;
+  }
+
+  .anchor-link:hover {
+    color: var(--accent);
   }
 
   .project-date {
