@@ -198,4 +198,16 @@ export const projects: Project[] = [
       'Stripe API upgrade',
     ],
   },
+  {
+    title: 'Fix Ruby on Rails App for iOS Backend',
+    description: 'Bug fixes and Heroku stack upgrade for an iOS backend application.',
+    longDescription:
+      'Performed bug fixes and maintenance on a Ruby on Rails application serving as the backend for an iOS app, including upgrading the Heroku stack from version 18 to 20.',
+    tags: ['Ruby on Rails', 'Heroku'],
+    dateRange: 'Jul 2023 - Aug 2023',
+    highlights: [
+      'Bug fixes',
+      'Heroku stack upgrade from 18 to 20',
+    ],
+  },
 ];
