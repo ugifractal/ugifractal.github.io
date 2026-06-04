@@ -239,6 +239,20 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: 'Heroku Redis Plugin Upgrade',
+    description: 'Migrated from Redis To-Go to Heroku official Redis for Cabinet Mysteriis.',
+    longDescription:
+      'Migrated the Redis add-on from Redis To-Go to Heroku\'s official Redis plugin for Cabinet Mysteriis. Ensured a seamless transition of cached data and configuration, updated environment variables, and verified application stability post-migration.',
+    tags: ['Heroku', 'Redis'],
+    dateRange: 'Jun 2025',
+    highlights: [
+      'Migrated from Redis To-Go to official Heroku Redis',
+      'Seamless data and configuration transition',
+      'Post-migration stability verification',
+      'Upwork',
+    ],
+  },
+  {
     title: 'Setup Multiple Rails Apps Using Docker for LUCKYLEZA LLC',
     description: 'Set up multiple Ruby on Rails applications using Docker for Upwork client LUCKYLEZA LLC.',
     longDescription:
