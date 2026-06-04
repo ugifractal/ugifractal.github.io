@@ -21,6 +21,7 @@ export const projects: Project[] = [
       'Advanced search via Elasticsearch',
       'Background job processing with Sidekiq',
       'Responsive, mobile-first design',
+      'Upwork',
     ],
   },
   {
@@ -38,6 +39,7 @@ export const projects: Project[] = [
       'Azure',
       'SureTax',
       'Microsoft D365',
+      'Upwork',
     ],
     dateRange: 'Mar 2025 - Oct 2025',
     highlights: [
@@ -63,6 +65,7 @@ export const projects: Project[] = [
       'Hotwire Turbo-driven navigation',
       'Stimulus.js interactive components',
       'Tailwind CSS responsive design',
+      'Upwork',
     ],
   },
   {
@@ -77,6 +80,7 @@ export const projects: Project[] = [
       'Order & customer sync',
       'Banner management tools',
       'Product groups & categorization',
+      'Upwork',
     ],
   },
   {
@@ -94,6 +98,7 @@ export const projects: Project[] = [
       'Metafield management',
       'Background job processing',
       'Discount management',
+      'Upwork',
     ],
   },
   {
@@ -107,6 +112,7 @@ export const projects: Project[] = [
       'Currency conversion monitoring',
       'Machine-to-machine email dispatch',
       'Automated system integration',
+      'Upwork',
     ],
   },
   {
@@ -119,6 +125,7 @@ export const projects: Project[] = [
     highlights: [
       'Product sync to Simpro',
       'Order update integration',
+      'Upwork',
     ],
   },
   {
@@ -132,6 +139,7 @@ export const projects: Project[] = [
       'Property listing management',
       'Client data management',
       'Database-driven architecture',
+      'Upwork',
     ],
   },
   {
@@ -144,6 +152,7 @@ export const projects: Project[] = [
     highlights: [
       'Bug fixes & maintenance',
       'Platform stability improvements',
+      'Upwork',
     ],
   },
   {
@@ -157,6 +166,7 @@ export const projects: Project[] = [
       'API integration with OAuth2 authentication',
       'Data collection for embedded device display',
       'Multiple API provider integrations',
+      'Upwork',
     ],
   },
   {
@@ -170,6 +180,7 @@ export const projects: Project[] = [
       'Multiple server setup',
       'Load balancer configuration',
       'Nginx reverse proxy setup',
+      'Upwork',
     ],
   },
   {
@@ -183,6 +194,7 @@ export const projects: Project[] = [
       'truemail server installation',
       'Dockerized deployment',
       'VPS server setup',
+      'Upwork',
     ],
   },
   {
@@ -196,6 +208,7 @@ export const projects: Project[] = [
       'Ruby version upgrade',
       'Rails version upgrade',
       'Stripe API upgrade',
+      'Upwork',
     ],
   },
   {
@@ -208,6 +221,7 @@ export const projects: Project[] = [
     highlights: [
       'Bug fixes',
       'Heroku stack upgrade from 18 to 20',
+      'Upwork',
     ],
   },
   {
@@ -221,6 +235,7 @@ export const projects: Project[] = [
       'Dockerized Rails 4 app',
       'VPS deployment',
       'Data migration',
+      'Upwork',
     ],
   },
   {
