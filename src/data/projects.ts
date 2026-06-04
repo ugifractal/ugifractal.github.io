@@ -210,4 +210,17 @@ export const projects: Project[] = [
       'Heroku stack upgrade from 18 to 20',
     ],
   },
+  {
+    title: 'Dockerize Rails 4 App and Deploy to VPS',
+    description: 'Dockerized a legacy Rails 4 application and deployed it to a VPS with data migration.',
+    longDescription:
+      'Containerized a legacy Ruby on Rails 4 application using Docker and Docker Compose, deployed it to a VPS, and performed data migration to ensure a smooth transition.',
+    tags: ['Docker', 'Docker Compose', 'Rails 4.x'],
+    dateRange: 'May 2023 - Jun 2023',
+    highlights: [
+      'Dockerized Rails 4 app',
+      'VPS deployment',
+      'Data migration',
+    ],
+  },
 ];
