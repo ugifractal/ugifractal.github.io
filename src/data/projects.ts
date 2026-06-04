@@ -172,4 +172,17 @@ export const projects: Project[] = [
       'Nginx reverse proxy setup',
     ],
   },
+  {
+    title: 'Install and Dockerize Email Verification Server to VPS',
+    description: 'Installed and Dockerized truemail email verification server on a VPS.',
+    longDescription:
+      'Installed and Dockerized the truemail email verification server on a VPS, providing automated email validation capabilities through a containerized deployment.',
+    tags: ['truemail', 'Docker', 'Linux'],
+    dateRange: 'Jun 2024 - May 2025',
+    highlights: [
+      'truemail server installation',
+      'Dockerized deployment',
+      'VPS server setup',
+    ],
+  },
 ];
