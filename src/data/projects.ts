@@ -223,4 +223,17 @@ export const projects: Project[] = [
       'Data migration',
     ],
   },
+  {
+    title: 'Setup Multiple Rails Apps Using Docker for LUCKYLEZA LLC',
+    description: 'Set up multiple Ruby on Rails applications using Docker for Upwork client LUCKYLEZA LLC.',
+    longDescription:
+      'Set up and deployed multiple Ruby on Rails applications using Docker for an Upwork client, LUCKYLEZA LLC. Configured Nginx as a reverse proxy on a CentOS server to manage and serve the containerized Rails apps.',
+    tags: ['Rails', 'Docker', 'Nginx', 'CentOS', 'Upwork'],
+    dateRange: 'Nov 2022 - Mar 2023',
+    highlights: [
+      'Multiple Rails app deployment',
+      'Docker containerization',
+      'Nginx reverse proxy setup on CentOS',
+    ],
+  },
 ];
