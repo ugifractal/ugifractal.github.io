@@ -11,12 +11,14 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: 'Aviation News',
-    description: 'A SaaS platform delivering curated aviation news with powerful search.',
+    description: 'A SaaS platform delivering curated aviation news and real-time flight monitoring with powerful search.',
     longDescription:
-      'A comprehensive SaaS platform focused on aviation news aggregation and delivery. Built with Ruby on Rails, the platform features subscription-based access via Stripe, full-text search powered by Elasticsearch, and reliable background job processing with Sidekiq.',
-    tags: ['Ruby on Rails', 'Stripe', 'Elasticsearch', 'Sidekiq', 'PostgreSQL'],
+      'A comprehensive SaaS platform focused on aviation news aggregation and real-time flight monitoring. Built with Ruby on Rails, the platform features subscription-based access via Stripe, full-text search powered by Elasticsearch, reliable background job processing with Sidekiq, and real-time flight tracking with Flightradar24 and Mapbox API visualization.',
+    tags: ['Ruby on Rails', 'Stripe', 'Elasticsearch', 'Sidekiq', 'MySQL', 'Vue.js', 'Stimulus.js', 'Flightradar24 API', 'Mapbox API'],
     dateRange: '2012 - Present',
     highlights: [
+      'Flight Monitoring System with Flightradar24 API integration',
+      'Mapbox API for interactive flight visualization',
       'Subscription billing with Stripe integration',
       'Advanced search via Elasticsearch',
       'Background job processing with Sidekiq',
