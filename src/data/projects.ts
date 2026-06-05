@@ -239,12 +239,95 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: 'Rails 3.x Upgrade for philadelphiabunkerclub.com',
+    description: 'Incremental Rails upgrade from 3.0 through 5.2 for philadelphiabunkerclub.com.',
+    longDescription:
+      'Performed an incremental Ruby on Rails upgrade for philadelphiabunkerclub.com, progressing through each major version from Rails 3.0 to 5.2 (3.0 → 3.1 → 3.2 → 4.0 → 4.1 → 4.2 → 5.0 → 5.1 → 5.2). Each increment was tested and validated to ensure the application remained stable throughout the migration.',
+    tags: ['Ruby on Rails', 'Linux'],
+    dateRange: 'Feb 2022 - Aug 2022',
+    highlights: [
+      'Incremental upgrade: Rails 3.0 through 5.2',
+      'Nine sequential version upgrades',
+      'Stability validation at each increment',
+      'Upwork',
+    ],
+  },
+  {
+    title: 'Bug Fixes on craftfoxes.com',
+    description: 'Bug fixes and maintenance for craftfoxes.com, an American How-to project.',
+    longDescription:
+      'Performed bug fixes and ongoing maintenance for craftfoxes.com, a how-to content platform for the client American How-to. Resolved various application issues to ensure platform stability and a smooth user experience.',
+    tags: ['Ruby on Rails'],
+    dateRange: 'Nov 2019 - Sep 2021',
+    highlights: [
+      'Bug fixes and issue resolution',
+      'Platform maintenance and stability',
+      'Upwork',
+    ],
+  },
+  {
+    title: 'Deploy Lobsters to VPS',
+    description: 'Deployed the Lobsters link aggregation platform to a VPS.',
+    longDescription:
+      'Deployed the open-source Lobsters link aggregation platform to a VPS, configuring the server environment, database, and web server to run the Rails-based application in production.',
+    tags: ['Ruby on Rails', 'Linux', 'Nginx', 'PostgreSQL'],
+    dateRange: 'Sep 2020',
+    highlights: [
+      'Lobsters platform deployment',
+      'Production server configuration',
+      'Database and web server setup',
+      'Upwork',
+    ],
+  },
+  {
+    title: 'Custom Shopify App for Label PDF Generation',
+    description: 'A custom Shopify app for generating label PDFs for a dog food store, built for Plusky ICT Consultancy.',
+    longDescription:
+      'Built a custom Shopify app for Plusky ICT Consultancy that generates label PDFs from Shopify order data for a store selling dog food compositions. The app pulls product composition data from orders and generates formatted label PDFs for fulfillment and shipping.',
+    tags: ['Ruby on Rails', 'Shopify', 'Shopify Admin API (REST)'],
+    dateRange: 'Oct 2020 - Nov 2020',
+    highlights: [
+      'Automated label PDF generation from Shopify orders',
+      'Shopify Admin API integration',
+      'Order fulfillment workflow automation',
+      'Upwork',
+    ],
+  },
+  {
+    title: 'Flutter App for RangeReact App',
+    description: 'Developed a Flutter mobile app (Android & iOS) for an ESP32-based shooting practice device.',
+    longDescription:
+      'Developed a cross-platform mobile app using Flutter and Dart for the RangeReact project, acting as the client interface for an ESP32-based shooting practice device. The app communicates with the hardware to provide real-time feedback and session management for shooting practice.',
+    tags: ['Flutter', 'Dart', 'ESP32'],
+    dateRange: 'Nov 2020 - Jun 2024',
+    highlights: [
+      'Cross-platform Flutter app for Android & iOS',
+      'ESP32 device integration',
+      'Real-time shooting practice feedback',
+      'Session management',
+      'Upwork',
+    ],
+  },
+  {
+    title: 'CSV Generation Script for Justus Lauten GmbH',
+    description: 'Developed a Ruby script to generate custom CSV data for Justus Lauten GmbH.',
+    longDescription:
+      'Developed a custom Ruby script to generate CSV data for Justus Lauten GmbH, producing correctly formatted output files for the client\'s data exchange and reporting requirements.',
+    tags: ['Ruby'],
+    dateRange: 'May 2021',
+    highlights: [
+      'Custom CSV generation in Ruby',
+      'Data formatting and output',
+      'Upwork',
+    ],
+  },
+  {
     title: 'Heroku Redis Plugin Upgrade',
     description: 'Migrated from Redis To-Go to Heroku official Redis for Cabinet Mysteriis.',
     longDescription:
       'Migrated the Redis add-on from Redis To-Go to Heroku\'s official Redis plugin for Cabinet Mysteriis. Ensured a seamless transition of cached data and configuration, updated environment variables, and verified application stability post-migration.',
     tags: ['Heroku', 'Redis'],
-    dateRange: 'Jun 2025',
+    dateRange: 'Jul 2022 - Dec 2022',
     highlights: [
       'Migrated from Redis To-Go to official Heroku Redis',
       'Seamless data and configuration transition',
