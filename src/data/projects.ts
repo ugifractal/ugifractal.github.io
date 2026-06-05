@@ -55,7 +55,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: 'Newsletter App',
+    title: 'SaaS Bulletin Newsletter App',
     description: 'A startup project for creating and sending newsletters to members.',
     longDescription:
       'A Ruby on Rails startup that allows users to create, manage, and send newsletters to their members. Built with Hotwire Turbo for seamless navigation, Stimulus.js for interactivity, and Tailwind CSS for the UI.',
