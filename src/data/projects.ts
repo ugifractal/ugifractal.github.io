@@ -206,6 +206,7 @@ export const projects: Project[] = [
       'Performed a comprehensive upgrade of the Ruby on Rails application for noomii.com, including upgrading the Ruby runtime, Rails framework version, and Stripe API integration to modern standards.',
     tags: ['Ruby on Rails', 'Stripe API', 'Google Maps API'],
     dateRange: 'Aug 2023 - 2024',
+    link: 'https://www.upwork.com/jobs/~0156fa361ed6f6977a',
     highlights: [
       'Ruby version upgrade',
       'Rails version upgrade',
@@ -344,6 +345,7 @@ export const projects: Project[] = [
       'Set up and deployed multiple Ruby on Rails applications using Docker for an Upwork client, LUCKYLEZA LLC. Configured Nginx as a reverse proxy on a CentOS server to manage and serve the containerized Rails apps.',
     tags: ['Rails', 'Docker', 'Nginx', 'CentOS', 'Upwork'],
     dateRange: 'Nov 2022 - Mar 2023',
+    link: 'https://www.upwork.com/jobs/~01fbf46e0c6da9abce',
     highlights: [
       'Multiple Rails app deployment',
       'Docker containerization',

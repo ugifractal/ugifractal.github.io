@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import { projects } from '../data/projects';
+import { slugify } from '../lib/slugify';
 ---
 
 <BaseLayout title="Projects">
@@ -11,6 +12,14 @@ import { projects } from '../data/projects';
       <p class="projects-intro">
         A selection of projects I've built. More coming soon.
       </p>
+      <h2 class="project-index-heading">Projects</h2>
+      <nav class="project-index">
+        {projects.map((project, index) => {
+          const anchorId = slugify(project.title);
+          const num = String(index + 1).padStart(2, '0');
+          return <a href={`#${anchorId}`}><span class="project-index-num">{num}</span>{project.title}</a>;
+        })}
+      </nav>
       <div class="projects-list">
         {projects.map((project, index) => (
           <ProjectCard project={project} index={index} />
@@ -26,5 +35,46 @@ import { projects } from '../data/projects';
     font-size: 1.1rem;
     margin-bottom: 2rem;
     max-width: 600px;
+  }
+
+  .project-index-heading {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .project-index {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .project-index a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 0.35rem 0.5rem;
+    border-radius: 4px;
+    transition: color 0.2s, background 0.2s;
+  }
+
+  .project-index a:hover {
+    color: var(--accent);
+    background: rgba(212, 165, 116, 0.08);
+  }
+
+  .project-index-num {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    min-width: 2rem;
   }
 </style>

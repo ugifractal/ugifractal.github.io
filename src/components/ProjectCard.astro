@@ -1,5 +1,6 @@
 ---
 import type { Project } from '../data/projects';
+import { slugify } from '../lib/slugify';
 
 export interface Props {
   project: Project;
@@ -7,15 +8,6 @@ export interface Props {
 }
 
 const { project, index } = Astro.props;
-
-function slugify(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^\w\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-')
-    .trim();
-}
 
 const anchorId = slugify(project.title);
 ---
@@ -35,6 +27,11 @@ const anchorId = slugify(project.title);
     <ul class="project-highlights">
       {project.highlights.map((h) => <li>{h}</li>)}
     </ul>
+    {project.link && (
+      <a href={project.link} class="project-link" target="_blank" rel="noopener noreferrer">
+        Upwork Job →
+      </a>
+    )}
   </div>
 </article>
 
@@ -145,6 +142,23 @@ const anchorId = slugify(project.title);
     position: absolute;
     left: 0;
     color: var(--accent);
+  }
+
+  .project-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid rgba(212, 165, 116, 0.2);
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .project-link:hover {
+    background: rgba(212, 165, 116, 0.1);
   }
 
   @media (max-width: 768px) {
