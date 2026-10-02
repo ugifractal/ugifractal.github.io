@@ -1,0 +1,305 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { projects } from '../data/projects';
+import { slugify } from '../lib/slugify';
+
+const experiences = [
+  {
+    id: 'aviation-news-experience',
+    role: 'Long-term Contractor — Full-stack Developer',
+    company: 'Aviation News',
+    dateRange: '2012 - 2026',
+    summary:
+      'Maintain and adding features to the Aviation News SaaS across 14 years — subscription billing, search, background processing, and real-time flight monitoring.',
+    projectSlugs: ['aviation-news'],
+  },
+  {
+    id: 'econolution-experience',
+    role: 'Web Developer — Ruby on Rails',
+    company: 'Econolution',
+    dateRange: 'Jan 2010 - Jun 2018',
+    summary:
+      'Maintained and added features to a Ruby on Rails v3 CMS serving counties in Canada such as Alberta and Edmonton — API integrations and deployment on Engine Yard.',
+    projectSlugs: ['canada-cms-econolution'],
+  },
+];
+
+const otherProjects = projects
+  .map((project, index) => ({ project, index }))
+  .filter(({ project }) => !project.companyUrl);
+---
+
+<BaseLayout
+  title="Resume"
+  description="Resume of Sugiarto — Senior Web Developer. Long-term engagement with Aviation News (2012 - 2026) plus other engagements."
+>
+  <section>
+    <div class="container resume">
+      <header class="resume-header">
+        <p class="resume-kicker">Resume</p>
+        <h1 class="page-title">Sugiarto</h1>
+        <p class="resume-title">Senior Web Developer — Ruby on Rails & API Integration</p>
+        <p class="resume-contact">
+          <a href="/contact">Get in Touch →</a>
+        </p>
+      </header>
+
+      <h2 class="section-heading">Summary</h2>
+      <div class="resume-summary">
+        <p>
+          Senior Web Developer with deep expertise in <strong>Ruby on Rails</strong> and a
+          strong track record of building scalable, maintainable web applications. I
+          specialize in <strong>API Integration</strong>, connecting diverse systems
+          through clean, scalable interfaces.
+        </p>
+        <p>
+          Longest engagement: <strong>Aviation News (2012 - 2026)</strong> — a
+          subscription-based aviation news SaaS with real-time flight monitoring, plus a
+          companion cross-platform Flutter app for iOS and Android.
+        </p>
+      </div>
+
+      <h2 class="section-heading">Experience</h2>
+
+      {experiences.map((exp) => (
+        <article class="experience" id={exp.id}>
+          <div class="exp-head">
+            <div class="exp-title-row">
+              <h3 class="exp-role">{exp.role}</h3>
+              <span class="exp-date">{exp.dateRange}</span>
+            </div>
+            <p class="exp-company">{exp.company}</p>
+          </div>
+          <p class="exp-summary">{exp.summary}</p>
+          <p class="exp-links">
+            {exp.projectSlugs.map((slug) => (
+              <a href={`/projects#${slug}`}>View projects in Projects →</a>
+            ))}
+          </p>
+        </article>
+      ))}
+
+      <h2 class="section-heading">Other engagements</h2>
+      <ul class="other-list">
+        {otherProjects.map(({ project }) => (
+          <li>
+            <a href={`/projects#${slugify(project.title)}`}>{project.title}</a>
+            <span class="other-date">{project.dateRange}</span>
+          </li>
+        ))}
+      </ul>
+
+      <h2 class="section-heading">Skills</h2>
+      <div class="skills">
+        <div class="skill-group">
+          <h4>Backend</h4>
+          <p>Ruby on Rails, PostgreSQL, MySQL, Elasticsearch, Sidekiq, REST API</p>
+        </div>
+        <div class="skill-group">
+          <h4>Integrations / API</h4>
+          <p>API Integration, REST & GraphQL, Stripe, Shopify Admin API</p>
+        </div>
+        <div class="skill-group">
+          <h4>Frontend & Mobile</h4>
+          <p>Vue.js, Stimulus, Hotwire, Tailwind CSS, Flutter, Dart</p>
+        </div>
+        <div class="skill-group">
+          <h4>DevOps</h4>
+          <p>Linux, Docker, Nginx, Kamal, DigitalOcean, Server Setup, Git</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style is:global>
+  .resume {
+    padding-bottom: 3rem;
+  }
+
+  .resume-kicker {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .resume-title {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .resume-contact a {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .resume-contact a:hover {
+    text-decoration: underline;
+  }
+
+  .resume-header {
+    margin-bottom: 1rem;
+  }
+
+  .section-heading {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .resume-summary {
+    max-width: 720px;
+  }
+
+  .resume-summary p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .resume-summary strong {
+    color: var(--text-primary);
+  }
+
+  .experience {
+    scroll-margin-top: 80px;
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+
+  .experience:target {
+    border-color: var(--accent);
+  }
+
+  .exp-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .exp-title-row {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+  }
+
+  .exp-role {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  .exp-company {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    margin: 0;
+  }
+
+  .exp-date {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .exp-summary {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+
+  .exp-links {
+    margin: 0;
+  }
+
+  .exp-links a {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .exp-links a:hover {
+    text-decoration: underline;
+  }
+
+  .other-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .other-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .other-list li:last-child {
+    border-bottom: none;
+  }
+
+  .other-list a {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .other-list a:hover {
+    color: var(--accent);
+  }
+
+  .other-date {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .skill-group h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-group p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .skills {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

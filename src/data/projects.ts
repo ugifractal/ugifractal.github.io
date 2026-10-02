@@ -4,6 +4,7 @@ export interface Project {
   longDescription: string;
   tags: string[];
   link?: string;
+  companyUrl?: string;
   dateRange: string;
   highlights: string[];
 }
@@ -15,7 +16,8 @@ export const projects: Project[] = [
     longDescription:
       'A comprehensive SaaS platform focused on aviation news aggregation and real-time flight monitoring. Built with Ruby on Rails, the platform features subscription-based access via Stripe, full-text search powered by Elasticsearch, reliable background job processing with Sidekiq, and real-time flight tracking with Flightradar24 and Mapbox API visualization.',
     tags: ['Ruby on Rails', 'Stripe', 'Elasticsearch', 'Sidekiq', 'MySQL', 'Vue.js', 'Stimulus.js', 'Flightradar24 API', 'Mapbox API'],
-    dateRange: '2012 - Present',
+    companyUrl: '/resume#aviation-news-experience',
+    dateRange: '2012 - 2026',
     highlights: [
       'Flight Monitoring System with Flightradar24 API integration',
       'Mapbox API for interactive flight visualization',
@@ -32,6 +34,7 @@ export const projects: Project[] = [
     longDescription:
       'A cross-platform mobile app built with Flutter and Dart for iOS and Android, delivering curated aviation news on the go. Features a news feed backed by a REST API, push notifications, full-text search, and subscription management. Uses Provider for state management and renders article content written in Textile markup format.',
     tags: ['Flutter', 'Dart', 'Provider', 'Textile', 'REST API', 'iOS', 'Android'],
+    companyUrl: '/resume#aviation-news-experience',
     dateRange: 'Mar 2023 - Jun 2023',
     highlights: [
       'Cross-platform Flutter app for iOS & Android',
@@ -367,6 +370,20 @@ export const projects: Project[] = [
       'Multiple Rails app deployment',
       'Docker containerization',
       'Nginx reverse proxy setup on CentOS',
+    ],
+  },
+  {
+    title: 'Canada CMS (Econolution)',
+    description: 'Maintained and extended a Ruby on Rails v3 CMS serving counties in Canada such as Alberta and Edmonton (Econolution).',
+    longDescription:
+      'Maintained a CMS built with Ruby on Rails v3 serving counties in Canada such as Alberta and Edmonton while at Econolution. Work covered adding new features, CMS maintenance, API integrations with external services, and deployment on Engine Yard.',
+    tags: ['Ruby on Rails', 'Rails 3.x', 'CMS', 'MySQL', 'API Integration', 'Engine Yard'],
+    companyUrl: '/resume#econolution-experience',
+    dateRange: 'Jan 2010 - Jun 2018',
+    highlights: [
+      'CMS feature development & maintenance',
+      'API integrations with external services',
+      'Deployment on Engine Yard',
     ],
   },
 ];

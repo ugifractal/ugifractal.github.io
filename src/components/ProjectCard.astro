@@ -32,6 +32,11 @@ const anchorId = slugify(project.title);
         Upwork Job →
       </a>
     )}
+    {project.companyUrl && (
+      <a href={project.companyUrl} class="project-link company-link">
+        View in Resume →
+      </a>
+    )}
   </div>
 </article>
 
@@ -159,6 +164,10 @@ const anchorId = slugify(project.title);
 
   .project-link:hover {
     background: rgba(212, 165, 116, 0.1);
+  }
+
+  .company-link {
+    margin-left: 0.5rem;
   }
 
   @media (max-width: 768px) {
