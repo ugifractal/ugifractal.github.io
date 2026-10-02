@@ -27,6 +27,23 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: 'Aviation News Flutter App',
+    description: 'A cross-platform Flutter app for iOS & Android delivering aviation news with a news feed, push notifications, search, and subscriptions.',
+    longDescription:
+      'A cross-platform mobile app built with Flutter and Dart for iOS and Android, delivering curated aviation news on the go. Features a news feed backed by a REST API, push notifications, full-text search, and subscription management. Uses Provider for state management and renders article content written in Textile markup format.',
+    tags: ['Flutter', 'Dart', 'Provider', 'Textile', 'REST API', 'iOS', 'Android'],
+    dateRange: 'Mar 2023 - Jun 2023',
+    highlights: [
+      'Cross-platform Flutter app for iOS & Android',
+      'News feed backed by REST API',
+      'Push notifications',
+      'Full-text search',
+      'Subscription management',
+      'Provider state management',
+      'Textile format article rendering',
+    ],
+  },
+  {
     title: 'Custom Shopify App for Beauty Stores',
     description: 'A custom Shopify middleware app for beauty stores, integrating Shopify with external services.',
     longDescription:
